@@ -1,5 +1,5 @@
 .body {
-	background-image: url("Background.jpg");
+	background-image: url("/images/Background.jpg");
 	background-color: #cccccc;
 	background-size: 100%;
 	overflow: initial;
