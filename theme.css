@@ -186,6 +186,9 @@
   justify-content: center;
 	font-size: 12px;
 }
+	.body {
+	background-size: 50%;
+}
   .item1 {
 	  grid-column: 1 / 1;
       grid-row: 2 / 2;
