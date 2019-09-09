@@ -1,18 +1,68 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en-US">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+<title>Archaeology World Map</title>
+<meta charset="UTF-8">
+<meta name="author" content="O.K.G">
+<meta name="tags" content="archaeology,map">
+<meta name="description" content="World archaeology map">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="theme.css">
+<link href='https://fonts.googleapis.com/css?family=Niconne' rel='stylesheet'>
 </head>
 
-<body>
+<!-- FLEX PART -->
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+<body class="body">
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+<link href="https://fonts.googleapis.com/css?family=Modern+Antiqua&display=swap" rel="stylesheet">
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script src="mapMenu.js"></script>
 
+<div class="flex-container">
+  <div class="title"><h1 class="title">World Archaeology Map</h1></div>
+  <div class="paragraph"><link href="https://fonts.googleapis.com/css?family=Modern+Antiqua&display=swap" rel="stylesheet"><p>The World Archaeology Map is a website that aims to provide a free for use starting point for academic research. 
+Everyone can view the map, but you need to be a part of an academic institute to edit it. We hope that in time it will include all the online information 
+that is allowed to be viewed by the public.<p></div>
+  <div id="WorldMap"><iframe class="map" src="https://www.google.com/maps/d/embed?mid=1IvfbVxND8zQQhnkZfMl2X4ZhGwaFBLK1"></iframe></div>
+  <div><footer class="footer">©2019 This site is a study project and is under construction.</footer></div>
+</div>
 </body>
+
+<!-- END OF FLEX PART -->
+
+<!-- GRID PART
+<body class="body">
+<link href="https://fonts.googleapis.com/css?family=Modern+Antiqua&display=swap" rel="stylesheet">
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<script src="mapMenu.js"></script>
+<div class="title">
+<h1 class="title">World Archaeology Map</h1>
+</div>
+<div class="paragraph">
+<link href="https://fonts.googleapis.com/css?family=Modern+Antiqua&display=swap" rel="stylesheet">
+<p>The World Archaeology Map is a website that aims to provide a free for use starting point for academic research. 
+Everyone can view the map, but you need to be a part of an academic institute to edit it. We hope that in time it will include all the online information 
+that is allowed to be viewed by the public.<p>
+</div>
+<div id="WorldMap">
+<iframe class="map" src="https://www.google.com/maps/d/embed?mid=1IvfbVxND8zQQhnkZfMl2X4ZhGwaFBLK1"></iframe>
+</div>
+<footer class="footer">©2019 This site is a study project and is under construction.</footer>
+</body>
+END OF GRID PART -->
 </html>
