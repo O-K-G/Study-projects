@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Company X  Weight Calculator</title>
+<meta charset="UTF-8">
+<meta name="author" content="Calc>
+<meta name="tags" content="units,weight,calculator">
+<meta name="description" content="Units weight calculator">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+<style>
+.flex-container {
+	display: flex;
+	background: hsl(200, 100%, 90%);
+	color: #666666;
+	flex-direction: column;
+	width: 80%;
+	height: 100%;
+	margin: 5% auto 5% auto;
+	align-items: center;
+	border: solid white 10px;
+	border-radius: 50px;
+	padding: 5%;
+	font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+	
+	
+}
+.body {
+	background-color: #ffffff;
+	font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+}
+.box {
+	background: hsl(200, 100%, 90%);
+	width: 20px;
+	height: 20px;
+	color: #000000;
+	font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+	font-weight: bold;
+}
+.box2 {
+	width: 100%;
+	height: 100%;
+	background: hsl(200, 100%, 90%);
+	margin: 3%;
+	border-bottom: solid white;
+	font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+}
+.button {
+  background-color: #67bc46;
+  border: 1px solid #67bc46;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+  font-size: 100%;
+  margin: 1% 0% 1% 0%;
+  opacity: 0.5;
+ 
+}
+.button:hover {
+  background-color: #67bc46;
+  border: 1px solid #67bc46;
+  border-radius: 100px;
+  color: white;
+  text-decoration: none;
+  margin: 1% 0% 1% 0%;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+  font-size: 100%;
+  opacity: 0.75;
+  transition: 0.3s;
+}
+.button:active {
+  background-color: #67bc46;
+  border: 1px solid #67bc46;
+  border-radius: 100px;
+  color: #ffff80;
+  text-decoration: none;
+  margin: 1% 0% 1% 0%;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif, Arial, Helvetica;
+  font-size: 100%;
+  opacity: 0.75;
+  transition: 0.3s;
+}
+.h1 {
+	font-size: 400%;
+	text-align: center;
+	color: #67bc46;
+}
+.h2 {
+	font-size: 200%;
+	text-align: left;
+	color: #67bc46;
+}
+.input {
+	border: none;
+	border-radius: 15px;
+	padding: 0.25%;
+	max-width: 400px;
+	width: 400px;
+}
+.input2 {
+	border: none;
+	border-radius: 15px;
+	padding: 0.25%;
+	max-width: 500px;
+	width: 500px;
+}
+.footer {
+	font-size: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .input {
+    width: 100px;
+	transition: 0.3s;
+  }
+    .input2 {
+    width: 200px;
+	transition: 0.3s;
+  }
+  .h1 {
+	font-size: 100%;
+	transition: 0.3s;
+}
+}
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 50px;
+	transition: 0.3s;
+  }
+   .input2 {
+    width: 100px;
+	transition: 0.3s;
+  }
+  .box {
+	font-size: 100%;
+	transition: 0.3s;
+}
+  .box2 {
+	font-size: 50%;
+	transition: 0.3s;
+}
+  .footer {
+	font-size: 50%;
+}
+}
+</style>
+<h1 class="h1">Company X Weight Calculator</h1>
+<div class="flex-container">
+  <div class="box2">
+<form><span style="white-space:nowrap;">
+  Quantity of <font color="#67bc46"><b>Product 1</b></font> units (2.02 kg/unit):
+  <input type="number" class="input" id="Product1InputUnits" name="quantity" min="0" value="0">
+</span></form>
+<button class="button" onclick="Product1UnitsFunction()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="result"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="resultLbs"></span>
+</div>
+<div class="box2">
+<form><span style="white-space:nowrap;">
+  Quantity of <font color="#67bc46"><b>Product 2</b></font> units (2.02 kg/unit):
+  <input type="number" class="input" id="Product2InputUnits" name="quantity2" min="0" value="0">
+</span></form>
+<button class="button" onclick="Product2UnitsFunction()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="result2"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="result2Lbs"></span>
+</div>
+<div class="box2">
+<form><span style="white-space:nowrap;">
+  Quantity of <font color="#67bc46"><b>Product 3</b></font> units (3.03 kg/unit):
+  <input type="number" class="input" id="Product3InputUnits" name="Product3Quantity" min="0" value="0">
+</span></form>
+<button class="button" onclick="Product3UnitsFunction()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="result3"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="result3Lbs"></span>
+</div>
+<div class="box2">
+<form><span style="white-space:nowrap;">
+  Quantity of <font color="#67bc46"><b>Product 4</b></font> units (4.04 kg/unit):
+  <input type="number" class="input" id="Product4InputUnits" name="Product4Quantity2" min="0" value="0">
+</span></form>
+<button class="button" onclick="Product4UnitsFunction()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="result4"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="result4Lbs"></span>
+</div>
+<div class="box2">
+<form><span style="white-space:nowrap;">
+  Quantity of <font color="#67bc46"><b>Product 5</b></font> units (5.05 kg/unit):
+  <input type="number" class="input" id="Product5InputUnits" name="Product5Quantity" min="0" value="0">
+</span></form>
+<button class="button" onclick="Product5UnitsFunction()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="result5"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="result5Lbs"></span>
+</div>
+<div class="box2">
+<form><span style="white-space:nowrap;">
+  Quantity of <font color="#67bc46"><b>Product 6</b></font> units (6.06 kg/unit):
+  <input type="number" class="input" id="Product6InputUnits" name="Product6Quantity2" min="0" value="0">
+</span></form>
+<button class="button" onclick="Product6UnitsFunction()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="result6"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="result6Lbs"></span>
+</div>
+<div class="box2">
+<form><span style="white-space:nowrap;">
+  <h2 class="h2">Total Weight:</h2>
+</span></form>
+<button class="button" onclick="total()">Calculate</button>
+<span style="white-space:nowrap;">Weight in <font color="#000066"><b>kg:</b></font> <span class="box" id="TotalResultKg"></span> | Weight in <font color="#b34700"><b>lbs:</b></font> <span class="box" id="TotalResultLbs"></span>
+</div>
+<div>
+<span style="white-space:nowrap;">
+  <h2 class="footer">Company X footer</h2>
+</span>
+</div>
+  </div>
+<script>
+
+	var Product1WeightKg = 2.02;
+	var Product2WeightKg = 2.02;
+	var Product3WeightKg = 3.03;
+	var Product4WeightKg = 4.04;
+	var Product5WeightKg = 5.05;
+	var Product6WeightKg = 6.06;
+	var lbs = 2.204623;
+
+function Product1UnitsFunction() {
+	var Product1units = document.getElementById("Product1InputUnits").value * Product1WeightKg;
+	document.getElementById("result").innerHTML = Product1units.toFixed(3);
+	var Product1unitsLbs = Product1units * lbs;
+	document.getElementById("resultLbs").innerHTML = Product1unitsLbs.toFixed(3);
+}
+function Product2UnitsFunction() {
+	var Product2units = document.getElementById("Product2InputUnits").value * Product2WeightKg;
+	document.getElementById("result2").innerHTML = Product2units.toFixed(3);
+	var Product2unitsLbs = Product2units * lbs;
+	document.getElementById("result2Lbs").innerHTML = Product2unitsLbs.toFixed(3);
+}
+function Product3UnitsFunction() {
+	var Product3Units = document.getElementById("Product3InputUnits").value * Product3WeightKg;
+	document.getElementById("result3").innerHTML = Product3Units.toFixed(3);
+	var Product3UnitsLbs = Product3Units * lbs;
+	document.getElementById("result3Lbs").innerHTML = Product3UnitsLbs.toFixed(3);
+}
+function Product4UnitsFunction() {
+	var Product4Units = document.getElementById("Product4InputUnits").value * Product4WeightKg;
+	document.getElementById("result4").innerHTML = Product4Units.toFixed(3);
+	var Product4UnitsLbs = Product4Units * lbs;
+	document.getElementById("result4Lbs").innerHTML = Product4UnitsLbs.toFixed(3);
+}
+function Product5UnitsFunction() {
+	var Product5Units = document.getElementById("Product5InputUnits").value * Product5WeightKg;
+	document.getElementById("result5").innerHTML = Product5Units.toFixed(3);
+	var Product5UnitsLbs = Product5Units * lbs;
+	document.getElementById("result5Lbs").innerHTML = Product5UnitsLbs.toFixed(3);
+}
+function Product6UnitsFunction() {
+	var Product6Units = document.getElementById("Product6InputUnits").value * Product6WeightKg;
+	document.getElementById("result6").innerHTML = Product6Units.toFixed(3);
+	var Product6UnitsLbs = Product6Units * lbs;
+	document.getElementById("result6Lbs").innerHTML = Product6UnitsLbs.toFixed(3);
+}
+
+function total() {
+	var TotalProduct1Units = document.getElementById("Product1InputUnits").value * Product1WeightKg;
+	var TotalProduct1UnitsLbs = TotalProduct1Units * lbs;
+	var TotalProduct2Units = document.getElementById("Product2InputUnits").value * Product2WeightKg;
+	var TotalProduct2UnitsLbs = TotalProduct2Units * lbs;
+	var TotalProduct3Units = document.getElementById("Product3InputUnits").value * Product3WeightKg;
+	var TotalProduct3UnitsLbs = TotalProduct3Units * lbs;
+	var TotalProduct4Units = document.getElementById("Product4InputUnits").value * Product4WeightKg;
+	var TotalProduct4UnitsLbs = TotalProduct4Units * lbs;
+	var TotalProduct5Units = document.getElementById("Product5InputUnits").value * Product5WeightKg;
+	var TotalProduct5UnitsLbs = TotalProduct5Units * lbs;
+	var TotalProduct6Units = document.getElementById("Product6InputUnits").value * Product6WeightKg;
+	var TotalProduct6UnitsLbs = TotalProduct6Units * lbs;
+	var totalKg = TotalProduct1Units + TotalProduct2Units + TotalProduct3Units + TotalProduct4Units + TotalProduct5Units + TotalProduct6Units;
+	var totalLbs = TotalProduct1UnitsLbs + TotalProduct2UnitsLbs + TotalProduct3UnitsLbs + TotalProduct4UnitsLbs + TotalProduct5UnitsLbs + TotalProduct6UnitsLbs;
+	document.getElementById("TotalResultKg").innerHTML = totalKg.toFixed(3);
+	document.getElementById("TotalResultLbs").innerHTML = totalLbs.toFixed(3);
+}
+</script>
+</body>
+</html>
