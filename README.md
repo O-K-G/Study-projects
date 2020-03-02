@@ -1,4 +1,5 @@
-The files were created as part of a study project, but were later modified and used for actual work in-front of customers.
+The files located here, are part of various study projects, at a beginner's level -
 
-The aim of the Text Copier file is to simply copy to the clipboard a pre-written text, so it can be pasted quickly as a reply to customers, instead of writing everything over and over again (or copying and pasting the usual way) - thus saving precious time.
-The aim of the Weight Calculator is to provide the weight of products, in order to be able to tell quickly based on shipments\orders data - if the order shipped with everything in it, or not. Thus also saving time.
+Text Copier - A tiny tool I created using HTML, CSS and JavaScript, to save time when replying e-mails etc', when repetitive messages are needed (greetings and such). It saves time by copying the text on a click of a button, instead of marking it, copying it and so on. it was later modified at work for CX operations -> using relevant text.
+
+Weight Calculator - Another tiny tool I created using HTML, CSS and JavaScript, to help calculate easily various orders weights, and save time doing it (important for logistics). This was also later modified at work for CX operations -> using actual products ad weights.
