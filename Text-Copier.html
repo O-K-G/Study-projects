@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Text Copy- V1.1</title>
+<meta charset="UTF-8">
+<meta name="author" content="Mr. Cat">
+<meta name="tags" content="text,scripts">
+<meta name="description" content="Automatically copy text to clipboard">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+textarea {
+  border: 0.5vw solid #a490b9;
+  border-radius: 10px;
+  width: 30vw;
+  height: 10vw;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  min-width: 200px;
+  opacity: 0.5;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+textarea:hover {
+  border: 0.5vw solid #e6b800;
+  border-radius: 10px;
+  width: 30vw;
+  height: 10vw;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  min-width: 200px;
+  opacity: 1;
+}
+button {
+  background-color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  border-radius: 100px;
+  color: white;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  margin: 1vw 1vw;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  opacity: 0.5;
+  vertical-align: 110%;
+  transition-timing-function: ease-in-out;
+  transition: 0.3s;
+
+}
+button:hover {
+  background-color: #ff4d4d;
+  border: 1px solid #ffdb4d;
+  border-radius: 100px;
+  color: white;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  margin: 1vw 1vw;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  opacity: 0.75;
+}
+button:active {
+  background-color: #cc0000;
+  border: 1px solid #ffdb4d;
+  border-radius: 100px;
+  color: #ffff80;
+  padding: 1vw 1vw;
+  text-decoration: none;
+  margin: 1vw 1vw;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  opacity: 0.75;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.title {
+		display: block;
+		font-family: Arial Helvetica, sans-serif;
+		font-size: 2vw;
+		font-weight: bold;
+		font-style: italic;
+}
+body {
+  background-image: linear-gradient(#ccf5ff, #e6ffe6);
+
+}
+.headers {
+		background-color: white;
+		display: block;
+		width: 20vw;
+		height: 4vw;
+		border: 2px #ffbf80 solid;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 100px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 100px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 0.5vw;
+		padding: 1vw;
+		opacity: 0.5;
+    transition-timing-function: ease-in-out;
+    transition: 0.3s;
+		
+}
+.headersLabel {
+		background-color: white;
+		display: block;
+		width: 20vw;
+		height: 4vw;
+		border: 2px #ffbf80 solid;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 100px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 100px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 0.5vw;
+		padding: 1vw;
+		opacity: 0.5;
+		
+}
+.headers:hover {
+		background-color: #fffae6;
+		display: block;
+		width: 20vw;
+		height: 4vw;
+		border: 2px #ffe066 solid;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 100px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 100px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 0.5vw;
+		padding: 1vw;
+		opacity: 0.75;
+		
+}
+.headersLabel:hover {
+		background-color: #fffae6;
+		display: block;
+		width: 20vw;
+		height: 4vw;
+		border: 2px #ffe066 solid;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 100px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 100px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 0.5vw;
+		padding: 1vw;
+		opacity: 0.75;
+		transition: 0.3s;
+		
+}
+footer {
+		display: block;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1vw;
+		color: black;
+		text-align: center;
+		padding-top: 5%;
+		}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0%;
+	transition: 0.3s;
+  }
+  button {
+    font-size: 14px;
+	vertical-align: 50%;
+	transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  }
+    button:hover {
+    font-size: 14px;
+	transition: 0.3s;
+  }
+    button:active {
+    font-size: 14px;
+	transition: 0.3s;
+  }
+  .headers {
+    font-size: 5px;
+	padding: 14px;
+	width: 170px;
+    height: 40px;
+	transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  }
+  .headersLabel {
+    font-size: 5px;
+	padding: 14px;
+	width: 170px;
+    height: 40px;
+	transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  }
+  .headersLabel:hover {
+    font-size: 5px;
+	padding: 14px;
+	width: 170px;
+    height: 40px;
+	transition: 0.3s;
+  }
+  .title {
+    font-size: 24px;
+	transition: 0.3s;
+  }
+  #myInput {
+    font-size: 14px;
+  }
+  #myInput2 {
+    font-size: 14px;
+  }
+  #myInput3 {
+    font-size: 14px;
+  }
+  #myInput4 {
+    font-size: 14px;
+  }
+  #myInput5 {
+    font-size: 14px;
+  }
+  #myInput6 {
+    font-size: 14px;
+  }
+  #myInput7 {
+    font-size: 14px;
+  }
+  #myInput8 {
+    font-size: 14px;
+  }
+  #myInput9 {
+    font-size: 14px;
+  }
+  #myInput10 {
+    font-size: 14px;
+  }
+  #myInput11 {
+    font-size: 14px;
+  }
+  #myInput12 {
+    font-size: 14px;
+  }
+  #myInput13 {
+    font-size: 14px;
+  }
+    }
+  #myInput14 {
+    font-size: 14px;
+  }
+  footer {
+    font-size: 10px;
+	transition: 0.3s;
+  }
+}
+</style>
+</head>
+<body>
+<div class="headersLabel">
+<h2>TEXT COPIER - V1.1<br>
+Edit this file with a text editor<br>
+And why not resize this window to the left? <b>←</b></h2></div>
+
+<div class="flex-container">
+
+<div><p class="title">Subject 1</p><textarea id="myInput" name="Subject1">Sample text 1.</textarea>
+<button onclick="myFunction()">COPY TEXT</button><br></div>
+
+<div><P class="title">Subject 2</p><textarea id="myInput2" name="Subject2">Sample text 2.</textarea>
+<button onclick="myFunction2()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 3</p><textarea id="myInput3" name="Subject3">Sample text 3.</textarea>
+<button onclick="myFunction3()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 4</p><textarea id="myInput4" name="Subject4">Sample text 4.</textarea>
+<button onclick="myFunction4()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 5</p><textarea id="myInput5" name="Subject5">Sample text 5.</textarea>
+<button onclick="myFunction5()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 6</p><textarea id="myInput6" name="Subject6">Sample text 6.</textarea>
+<button onclick="myFunction6()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 7</p><textarea id="myInput7" name="Subject7">Sample text 7.</textarea>
+<button onclick="myFunction7()">COPY TEXT</button><br></div>
+
+<div><P class="title">Subject 8</P><textarea id="myInput8" name="Subject8">Sample text 8.</textarea>
+<button onclick="myFunction8()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 9</p><textarea id="myInput9" name="Subject9">Sample text 9.</textarea>
+<button onclick="myFunction9()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 10</p><textarea id="myInput10" name="Subject10">Sample text 10.</textarea>
+<button onclick="myFunction10()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 11</p><textarea id="myInput11" name="Subject11">Sample text 11.</textarea>
+<button onclick="myFunction11()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 12</p><textarea id="myInput12" name="Subject12">Sample text 12.</textarea>
+<button onclick="myFunction12()">COPY TEXT</button><br></div>
+
+<div><p class="title">Subject 13</p><textarea id="myInput13" name="Subject13">Sample text 13.</textarea>
+<button onclick="myFunction13()">COPY TEXT</button><br></div>
+
+<div><P class="title">Subject 14</p><textarea id="myInput14" name="Subject14">Sample text 14.</textarea>
+<button onclick="myFunction14()">COPY TEXT</button><br></div>
+
+
+</div>
+
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction2() {
+  var copyText = document.getElementById("myInput2");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction3() {
+  var copyText = document.getElementById("myInput3");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction4() {
+  var copyText = document.getElementById("myInput4");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction5() {
+  var copyText = document.getElementById("myInput5");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction6() {
+  var copyText = document.getElementById("myInput6");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction7() {
+  var copyText = document.getElementById("myInput7");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction8() {
+  var copyText = document.getElementById("myInput8");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction9() {
+  var copyText = document.getElementById("myInput9");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction10() {
+  var copyText = document.getElementById("myInput10");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction11() {
+  var copyText = document.getElementById("myInput11");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction12() {
+  var copyText = document.getElementById("myInput12");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction13() {
+  var copyText = document.getElementById("myInput13");
+  copyText.select();
+  document.execCommand("copy");
+}
+function myFunction14() {
+  var copyText = document.getElementById("myInput14");
+  copyText.select();
+  document.execCommand("copy");
+}
+</script>
+<footer>Company X footer</footer>
+</body>
+</html>
