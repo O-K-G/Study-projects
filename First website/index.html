@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Poly Station</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Poly Station">
+	<meta name="tags" content="polyamory,station,events,love,nonmonogamy,non-monogamy,community">
+	<meta name="description" content="Need to get to a polyamory event? Welcome to the station.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="CSS/index.css" />
+	<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+</head>
+
+<body class="body">
+	<div class="header"><a href="https://poly-station.github.io/site">POLY STATION</a><i class="fa fa-bars"
+			id="barsIcon" onclick="showHideNav()"></i></div>
+	<div class="navMenuHolder" id="ulID1">
+		<ul>
+			<li><a onclick="showHide('panel1')"><i class="fa fa-map"></i> Show the Map</a></li>
+			<li><a onclick="showHide('findEvents'), switchDayCache()"><i class="fa fa-calendar"></i> Find Events</a>
+			</li>
+			<li><a onclick="showHide('addEvents')"><i class="fa fa-plus"></i> Add Events</a></li>
+			<li><a onclick="showHide('contactUs')"><i class="fa fa-comments"></i> Contact us</a></li>
+			<li><a onclick="showHide('aboutID')"><i class="fa fa-info-circle"></i> About</a></li>
+		</ul>
+	</div>
+	</div>
+	<p class="panel" id="panel1ID" onclick="showHide('panel1')">Click here to see the next polyamory event!</p>
+	<div id="typeForm1" class="typeFormContainer">
+		<div class="typeform-widget typeformEmbedded1" data-url="https://polymeetups.typeform.com/to/qaGXKE"
+			data-transparency="100" data-hide-headers=true data-hide-footer=true></div>
+		<div class="typeformEmbedded2"> powered by <a class="typeformEmbedded3"
+				href="https://admin.typeform.com/signup?utm_campaign=qaGXKE&utm_source=typeform.com-01E41QE5GED168FDH0HH7VZZX5-free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN"
+				target="_blank">Typeform</a> </div>
+	</div>
+
+	<div id="typeForm2" class="typeFormContainer">
+		<div class="typeform-widget typeformEmbedded1" data-url="https://polymeetups.typeform.com/to/dGJQRz"
+			data-transparency="100" data-hide-headers=true data-hide-footer=true></div>
+		<div class="typeformEmbedded2"> powered by <a class="typeformEmbedded3"
+				href="https://admin.typeform.com/signup?utm_campaign=dGJQRz&utm_source=typeform.com-01E41QE5GED168FDH0HH7VZZX5-free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=EN"
+				target="_blank">Typeform</a> </div>
+	</div>
+
+	<div class="fullWidthBlocker"></div>
+	<div class="divMapIcon"><i class="mapIcon fa fa-times-circle-o" id="closeMapIconID" onclick="showHide()"></i></div>
+	<div class="fullWidthBlocker"></div>
+	<div class="mapContainer" id="mapID"><iframe
+			src="https://www.google.com/maps/d/embed?mid=1pdn_L_lxBrQGljopyZeHYHlRnPr1xhGi&ll=12.588088035638613%2C0&z=2"></iframe>
+	</div>
+
+	<div class="HiddenPanel" id="aboutID">
+		<div class="events">
+			<h1 class="eventHeader">What is this place?</h1>
+			<p class="eventParagraph">Our goal is to help everyone find their next polyamory event, as simple as that.
+				:)<br><br>Regardless, this website is also a programming study project, and is still under construction.
+			</p>
+		</div>
+	</div>
+	<div class="HiddenPanel" id="eventsLister">
+		<h1 class="calendarHeader">April 2020</h1>
+		<h3 class="calendarHeader3">Please choose the first day of the week:</h3>
+
+		<ul class="buttonsContainer">
+			<li><a class="firstDayButton" onclick="switchDay('Saturday')">Saturday</a></li>
+			<li><a class="firstDayButton" onclick="switchDay('Sunday')">Sunday</a></li>
+			<li><a class="firstDayButton" onclick="switchDay('Monday')">Monday</a></li>
+		</ul>
+
+		<div class="eventTitleContainer">
+			<div class="eventBoxes hiddenBoxes daysTitles firstSaturdayTitle">Saturday</div>
+			<div class="eventBoxes hiddenBoxes daysTitles firstSundayTitle">Sunday</div>
+			<div class="eventBoxes daysTitles">Monday</div>
+			<div class="eventBoxes daysTitles">Tuesday</div>
+			<div class="eventBoxes daysTitles">Wednesday</div>
+			<div class="eventBoxes daysTitles">Thursday</div>
+			<div class="eventBoxes daysTitles">Friday</div>
+			<div class="eventBoxes hiddenBoxes daysTitles lastSaturdayTitle">Saturday</div>
+			<div class="eventBoxes daysTitles lastSundayTitle">Sunday</div>
+		</div>
+		<div class="eventBoxesContainer">
+			<div class="eventBoxes hiddenBoxes firstSaturday"></div>
+			<div class="eventBoxes hiddenBoxes firstSunday"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes">
+				<p>1</p>
+			</div>
+			<div class="eventBoxes">
+				<p>2</p>
+			</div>
+			<div class="eventBoxes">
+				<p>3</p>
+			</div>
+			<div class="eventBoxes">
+				<p>4</p>
+				<p class="eventsDescription">Text text textTextText text text text text text text text textText text
+					text text text text text text textText text text text text text text text text text text text text
+					text text text text text text text text text text</p>
+			</div>
+			<div class="eventBoxes">
+				<p>5</p>
+			</div>
+			<div class="eventBoxes">
+				<p>6</p>
+			</div>
+			<div class="eventBoxes">
+				<p>7</p>
+			</div>
+			<div class="eventBoxes">
+				<p>8
+			</div>
+			<div class="eventBoxes">
+				<p>9</p>
+			</div>
+			<div class="eventBoxes">
+				<p>10</p>
+			</div>
+			<div class="eventBoxes">
+				<p>11</p>
+			</div>
+			<div class="eventBoxes">
+				<p>12</p>
+			</div>
+			<div class="eventBoxes">
+				<p>13</p>
+			</div>
+			<div class="eventBoxes">
+				<p>14</p>
+			</div>
+			<div class="eventBoxes">
+				<p>15</p>
+			</div>
+			<div class="eventBoxes">
+				<p>16</p>
+			</div>
+			<div class="eventBoxes">
+				<p>17</p>
+			</div>
+			<div class="eventBoxes">
+				<p>18</p>
+			</div>
+			<div class="eventBoxes">
+				<p>19</p>
+			</div>
+			<div class="eventBoxes">
+				<p>20</p>
+			</div>
+			<div class="eventBoxes">
+				<p>21</p>
+			</div>
+			<div class="eventBoxes">
+				<p>22</p>
+			</div>
+			<div class="eventBoxes">
+				<p>23</p>
+			</div>
+			<div class="eventBoxes">
+				<p>24</p>
+			</div>
+			<div class="eventBoxes">
+				<p>25</p>
+			</div>
+			<div class="eventBoxes">
+				<p>26</p>
+			</div>
+			<div class="eventBoxes">
+				<p>27</p>
+			</div>
+			<div class="eventBoxes">
+				<p>28</p>
+			</div>
+			<div class="eventBoxes">
+				<p>29</p>
+			</div>
+			<div class="eventBoxes">
+				<p>30</p>
+			</div>
+			<div class="eventBoxes">
+				<p></p>
+			</div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes lastSaturday"></div>
+			<div class="eventBoxes lastSunday"></div>
+		</div>
+		<h1 class="calendarHeader">May 2020</h1>
+		<div class="eventTitleContainer">
+			<div class="eventBoxes hiddenBoxes daysTitles firstSaturdayTitle">Saturday</div>
+			<div class="eventBoxes hiddenBoxes daysTitles firstSundayTitle">Sunday</div>
+			<div class="eventBoxes daysTitles">Monday</div>
+			<div class="eventBoxes daysTitles">Tuesday</div>
+			<div class="eventBoxes daysTitles">Wednesday</div>
+			<div class="eventBoxes daysTitles">Thursday</div>
+			<div class="eventBoxes daysTitles">Friday</div>
+			<div class="eventBoxes hiddenBoxes daysTitles lastSaturdayTitle">Saturday</div>
+			<div class="eventBoxes daysTitles lastSundayTitle">Sunday</div>
+		</div>
+		<div class="eventBoxesContainer">
+			<div class="eventBoxes hiddenBoxes firstSaturday"></div>
+			<div class="eventBoxes hiddenBoxes firstSunday"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes">
+				<p></p>
+			</div>
+			<div class="eventBoxes">
+				<p></p>
+			</div>
+			<div class="eventBoxes">
+				<p>1</p>
+			</div>
+			<div class="eventBoxes">
+				<p>2</p>
+				<p class="eventsDescription">Text text textTextText text text text text text text text textText text
+					text text text text text text textText text text text text text text text text text text text text
+					text text text text text text text text text text</p>
+			</div>
+			<div class="eventBoxes">
+				<p>3</p>
+			</div>
+			<div class="eventBoxes">
+				<p>4</p>
+			</div>
+			<div class="eventBoxes">
+				<p>5</p>
+			</div>
+			<div class="eventBoxes">
+				<p>6
+			</div>
+			<div class="eventBoxes">
+				<p>7</p>
+			</div>
+			<div class="eventBoxes">
+				<p>8</p>
+			</div>
+			<div class="eventBoxes">
+				<p>9</p>
+			</div>
+			<div class="eventBoxes">
+				<p>10</p>
+			</div>
+			<div class="eventBoxes">
+				<p>11</p>
+			</div>
+			<div class="eventBoxes">
+				<p>12</p>
+			</div>
+			<div class="eventBoxes">
+				<p>13</p>
+			</div>
+			<div class="eventBoxes">
+				<p>14</p>
+			</div>
+			<div class="eventBoxes">
+				<p>15</p>
+			</div>
+			<div class="eventBoxes">
+				<p>16</p>
+			</div>
+			<div class="eventBoxes">
+				<p>17</p>
+			</div>
+			<div class="eventBoxes">
+				<p>18</p>
+			</div>
+			<div class="eventBoxes">
+				<p>19</p>
+			</div>
+			<div class="eventBoxes">
+				<p>20</p>
+			</div>
+			<div class="eventBoxes">
+				<p>21</p>
+			</div>
+			<div class="eventBoxes">
+				<p>22</p>
+			</div>
+			<div class="eventBoxes">
+				<p>23</p>
+			</div>
+			<div class="eventBoxes">
+				<p>24</p>
+			</div>
+			<div class="eventBoxes">
+				<p>25</p>
+			</div>
+			<div class="eventBoxes">
+				<p>26</p>
+			</div>
+			<div class="eventBoxes">
+				<p>27</p>
+			</div>
+			<div class="eventBoxes">
+				<p>28</p>
+			</div>
+			<div class="eventBoxes">
+				<p>29</p>
+			</div>
+			<div class="eventBoxes">
+				<p>30</p>
+			</div>
+			<div class="eventBoxes">
+				<p>31</p>
+			</div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes"></div>
+			<div class="eventBoxes lastSaturday"></div>
+			<div class="eventBoxes lastSunday"></div>
+		</div>
+
+		<div class="events">
+			<h1 class="eventHeader">Event 2</h1>
+			<p class="eventParagraph">text text</p>
+		</div>
+		<!-- Sample events panel code. You can copy it when needed.	<div class ="events"><h1 class="eventHeader">Event 6</h1><p class="eventParagraph">text text</p></div> -->
+	</div>
+	<footer class="footer"><a href="https://poly-station.github.io/site"><i class="fa fa-copyright"></i>2020
+			Poly-Station</a></footer>
+	<script src="js/index.js"></script>
+</body>
+
+</html>
