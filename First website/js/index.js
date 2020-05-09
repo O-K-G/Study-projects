@@ -28,6 +28,7 @@ function showHideNav() {
   }
 }
 
+// Deleted TypeForm JS code.
 
 function switchDayCache() {
   var x = localStorage.getItem("firstDay");
