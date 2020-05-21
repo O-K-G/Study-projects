@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Required by Bootstrap -->
+
+<head>
+  <title>Typology Exercise ~ Ver:0.1 (Alpha)</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="O.K.G">
+  <meta name="tags" content="archaeology,typology,flint,stone,ceramic,pottery,exercise,practice,study">
+  <meta name="description"
+    content="An exercise for archaeology students who study the typology of artifacts in Israel.">
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+  <h1>Typology Exercise of Artifacts in Israel</h1>
+  <h2>Version: 0.1 (Alpha) ~ Still in development</h2>
+
+  <!-- Navigation buttons. -->
+
+  <div class="topNavContainer">
+    <div class="typologyCourse topNavButton" title="Home">
+      <button class="topNavButtonIcons homeIcon"></button>
+      <p>Home</p>
+    </div>
+
+    <div class="typologyCourse topNavButton" title="Prehistoric Stone Tools">
+      <button class="topNavButtonIcons flintIcon"></button>
+      <p>Prehistoric Stone Tools</p>
+    </div>
+
+    <div class="typologyCourse topNavButton" title="Ceramic Typology A">
+      <button class="topNavButtonIcons courseA"></button>
+      <p>Ceramic Typology A</p>
+    </div>
+
+    <div class="typologyCourse topNavButton" title="Ceramic Typology B">
+      <button class="topNavButtonIcons courseB"></button>
+      <p>Ceramic Typology B</p>
+    </div>
+
+    <div class="typologyCourse topNavButton" title="Ceramic Typology C">
+      <button class="topNavButtonIcons courseC"></button>
+      <p>Ceramic Typology C</p>
+    </div>
+  </div>
+
+  <!-- Header. -->
+
+  <h3 class="chooseTypologyMessage">Please first choose the required typology from the above menu.</h3>
+
+
+  <!-- Main container (card + artifacts data section). -->
+
+  <div class="mainContainer">
+
+    <!-- Card body. -->
+
+    <div class="card">
+      <img src="" class="cardImage" alt="Artifact Image">
+      <div class="buttonsContainer">
+        <div><button title="Next button" class="cardButtons nextButton"></button>
+          <p class="cardButtonsText">Next</p>
+        </div>
+        <div><button title="Good" class="cardButtons yes answer"></button>
+          <p class="cardButtonsText">Good</p>
+        </div>
+        <div><button title="Bad" class="cardButtons no answer"></button>
+          <p class="cardButtonsText">Bad</p>
+        </div>
+        <div><button title="Show answer button" class="cardButtons showAnswer"></button>
+          <p class="cardButtonsText">Answer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Artifacts data. -->
+
+    <div class="artifactText">
+
+      <div class="counterText">
+        <h3>How did you answer from your memory?</h3>
+        <p class="counter"></p>
+        <p class="counter"></p>
+        <p class="instructions">Hit the "Good" button if you remembered everything about the artifact.<br><br>
+          Hit the "Bad" button if you forgot something.</p>
+      </div>
+
+      <div class="artifactTextInnerBoxes">
+        <p>Name:</p>
+        <p>Type:</p>
+        <p>Subtype:</p>
+        <p>Technique:</p>
+        <p>Cut:</p>
+        <p>Period:</p>
+        <p>Culture:</p>
+        <p>Blank:</p>
+        <p>Remarks:</p>
+      </div>
+
+      <div class="artifactTextInnerBoxes">
+        <p class="name"></p>
+        <p class="type"></p>
+        <p class="subType"></p>
+        <p class="technique"></p>
+        <p class="cut"></p>
+        <p class="period"></p>
+        <p class="culture"></p>
+        <p class="blank"></p>
+        <p class="remarks"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p class="footerText">©2020 Typology Exercise</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
