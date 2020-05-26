@@ -371,8 +371,11 @@ footer p {
     }
 
     .cardImage {
-        width: 100vw;
-        height: 100vw;
+        width: 50vw;
+        height: 50vw;
+        background-position: center;
+        display: block;
+        margin-top: 4vw;
     }
 
     .cardButtons {
