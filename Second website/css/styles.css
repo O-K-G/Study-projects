@@ -341,18 +341,6 @@ footer p {
         height: auto;
     }
 
-    .cardImage {
-        width: 50vw;
-        height: 50vw;
-        background-position: center;
-        display: block;
-        margin-top: 4vw;
-    }
-
-    .buttonsContainer {
-        justify-content: center;
-    }
-
     .buttonHolder {
         margin: 1vw;
     }
