@@ -335,7 +335,7 @@ function artifactsData(randomNumber, maxString, minString) {
     document.querySelectorAll(".blank")[0].innerText = artifact.blank;
     document.querySelectorAll(".remarks")[0].innerText = artifact.remarks;
     showTheAnswerButton()
-    showAnswerButton.setAttribute("Style", "display: inline-block;");
+    showAnswerButton.setAttribute("Style", "display: block;");
     LeftInnerBox.setAttribute("Style", "visibility: hidden;");
     RightInnerBox.setAttribute("Style", "visibility: hidden;");
 }
