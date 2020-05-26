@@ -195,10 +195,9 @@ border: 1px solid hsla(226, 57%, 55%, 1);
     display: inline-block;
     text-align: left;
     height: auto;
-    position: relative;
-    height: 100%;
-    font-size: 1vw;
     width: auto;
+    position: relative;
+    font-size: 1vw;
 }
 
 
