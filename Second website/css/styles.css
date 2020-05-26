@@ -367,7 +367,7 @@ footer p {
 
     .card {
         width: 100vw;
-        height: 100vw;
+        height: auto;
     }
 
     .cardImage {
@@ -392,6 +392,18 @@ footer p {
 
     .artifactTextInnerBoxes {
         font-size: 2vw;
+    }
+
+    .counterText {
+        font-size: 3vw;
+    }
+
+    .counterText h3 {
+        font-size: 4vw;
+    }
+
+    .instructions {
+        font-size: 3vw;
     }
 
     .cardButtonsText {
