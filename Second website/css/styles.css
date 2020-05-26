@@ -386,6 +386,7 @@ footer p {
 
     .artifactText {
         width: 100vw;
+        min-height: 50vw;
         height: auto;
         font-size: 0.5vw;
     }
