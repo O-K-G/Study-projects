@@ -318,7 +318,7 @@ footer p {
     }
 
     footer {
-        font-size: 1vw;
+        font-size: 2vw;
     }
 }
 
@@ -337,18 +337,32 @@ footer p {
 
 @media only screen and (max-width: 850px) {
 
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 2vw;
+    }
+
+    h3 {
+        font-size: 3vw;
+    }
+
     .topNavButton {
-        min-width: 16vw;
+        margin: 2vw 2vw 2vw 2vw;
+        min-width: 25vw;
     }
 
     .topNavButton p {
-        font-size: 1.5vw;
+        font-size: 2.5vw;
+        margin-top: 1vw;
     }
 
     .topNavButtonIcons {
-        width: 8vw;
-        height: 8vw;
-        background-size: 4vw;
+        width: 16vw;
+        height: 16vw;
+        background-size: 8vw;
     }
 
     .card {
@@ -379,5 +393,9 @@ footer p {
 
     .cardButtonsText {
         font-size: 2vw;
+    }
+
+    footer {
+        font-size: 4vw;
     }
 }
