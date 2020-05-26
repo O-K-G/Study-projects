@@ -37,7 +37,7 @@ h3 {
 }
 
 .topNavButton p {
-    width: 100%;
+    width: auto;
     display: block;
     position: relative;
     text-align: center;
