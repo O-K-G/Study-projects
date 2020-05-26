@@ -353,7 +353,7 @@ footer p {
 
     .artifactText {
         width: 100vw;
-        min-height: 50vw;
+        min-height: 100vw;
         height: auto;
         font-size: 0.5vw;
     }
@@ -363,15 +363,15 @@ footer p {
     }
 
     .counterText {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .counterText h3 {
-        font-size: 4vw;
+        font-size: 6vw;
     }
 
     .instructions {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
     .cardButtonsText {
